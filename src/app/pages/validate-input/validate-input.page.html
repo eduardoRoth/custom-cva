@@ -25,7 +25,7 @@
     </ion-item>
   </ion-card>
   <ion-card>
-    @if(firstName.touched){
+    @if(firstName.touched){ @if(firstName.valid){
     <ion-item>
       <ion-icon
         slot="start"
@@ -33,9 +33,18 @@
         name="checkmark-circle-outline"
         color="success"
       ></ion-icon>
-      Filtered input: {{ firstName.value }}
+      <ion-label> {{ firstName.value }} </ion-label>
     </ion-item>
-    }
+    }@else {
+    <ion-item>
+      <ion-icon
+        slot="start"
+        size="large"
+        name="close-circle-outline"
+        color="danger"
+      ></ion-icon>
+      <ion-label>Invalid value for input</ion-label>
+    </ion-item>
+    } }
   </ion-card>
-  <ion-input> </ion-input>
 </ion-content>

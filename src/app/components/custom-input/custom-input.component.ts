@@ -50,6 +50,8 @@ export class CustomInputComponent implements ControlValueAccessor {
     if (check.test(newValue)) {
       this.value.set(newValue);
       this.onChange(newValue);
+    } else {
+      this.onChange('');
     }
   }
 }

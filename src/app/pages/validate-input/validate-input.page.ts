@@ -1,6 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import {
   IonCard,
   IonCardHeader,
@@ -41,7 +46,13 @@ import { CustomInputComponent } from '../../components/custom-input/custom-input
 })
 export class ValidateInputPage {
   regexp = signal<string>('^[a-z]*$');
-  firstName = new FormControl('');
+  firstName = new FormControl('', [
+    Validators.required,
+    (value) => {
+      console.log(value);
+      return null;
+    },
+  ]);
 
   constructor() {
     addIcons({
