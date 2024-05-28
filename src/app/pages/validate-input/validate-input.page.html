@@ -12,6 +12,7 @@
         type="text"
         placeholder="^[a-z]*$"
         [(ngModel)]="regexp"
+        (input)="firstName.setValue(firstName.value)"
       ></ion-input>
     </ion-item>
 
