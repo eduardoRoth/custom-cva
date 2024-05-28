@@ -10,16 +10,16 @@
       <ion-label position="stacked">Regular Expression</ion-label>
       <ion-input
         type="text"
-        placeholder="^[a-z]*$"
-        [(ngModel)]="regexp"
-        (input)="firstName.setValue(firstName.value)"
+        [ngModel]="regexp()"
+        (ngModelChange)="regexp.set($event)"
+        (ionInput)="firstName.reset()"
       ></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Enter your text</ion-label>
       <app-custom-input
-        [regexp]="regexp"
+        [regexp]="regexp()"
         [formControl]="firstName"
       ></app-custom-input>
     </ion-item>
