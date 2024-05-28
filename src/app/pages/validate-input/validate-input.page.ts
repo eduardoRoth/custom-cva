@@ -46,13 +46,7 @@ import { CustomInputComponent } from '../../components/custom-input/custom-input
 })
 export class ValidateInputPage {
   regexp = signal<string>('^[a-z]*$');
-  firstName = new FormControl('', [
-    Validators.required,
-    (value) => {
-      console.log(value);
-      return null;
-    },
-  ]);
+  firstName = new FormControl('', [Validators.required]);
 
   constructor() {
     addIcons({
