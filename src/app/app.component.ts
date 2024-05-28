@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CustomInputComponent } from './components/custom-input/custom-input.component';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
@@ -9,6 +9,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [RouterOutlet, CustomInputComponent, IonApp, IonRouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'custom-cva';
