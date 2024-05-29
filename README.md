@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
-![custom-cva.png](custom-cva.png)
+![custom-cva-success.png](custom-cva-success.png)
+
+![custom-cva-fail.png](custom-cva-fail.png)
 
 ## Development server
 
